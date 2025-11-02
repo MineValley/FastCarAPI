@@ -1,7 +1,7 @@
 package minevalley.fastcar.api;
 
 @SuppressWarnings("unused")
-public class FastCar {
+public final class FastCar {
 
     private static FastCarProvider provider;
 }
