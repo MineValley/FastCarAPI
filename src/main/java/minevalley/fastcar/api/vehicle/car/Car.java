@@ -7,6 +7,4 @@ import minevalley.fastcar.api.vehicle.Vehicle;
 
 @SuppressWarnings("unused")
 public interface Car extends Vehicle<Car>, Refuelable, Storage, Licensed {
-
-    void test();
 }

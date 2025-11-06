@@ -26,7 +26,7 @@ public class PenaltyIssuedEvent<T extends Vehicle<T>> implements Cancellable {
     private boolean cancelled = false;
 
     @Nonnull
-    private final Penalty<?> penalty;
+    private final Penalty<T> penalty;
 
     public PenaltyIssuedEvent(@Nonnull Penalty<T> penalty) {
         this.penalty = penalty;
