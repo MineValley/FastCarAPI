@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
  * @param <T> the type of the physics object
  */
 @SuppressWarnings("unused")
-public interface Vehicle<T extends PhysicsObject> {
+public interface Vehicle<T extends Vehicle<T>> {
 
     /**
      * Gets the model of this vehicle.
@@ -44,7 +44,7 @@ public interface Vehicle<T extends PhysicsObject> {
      */
     @Nullable
     @Contract(pure = true)
-    T physicsObject();
+    PhysicsObject<T> physicsObject();
 
     /**
      * Sets the color of this vehicle.

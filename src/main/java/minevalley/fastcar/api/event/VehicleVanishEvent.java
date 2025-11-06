@@ -15,12 +15,12 @@ import javax.annotation.Nonnull;
  */
 @Getter
 @SuppressWarnings("unused")
-public class VehicleVanishEvent extends VehicleEvent {
+public class VehicleVanishEvent<T extends Vehicle<T>> extends VehicleEvent<T> {
 
     @Nonnull
     private final Reason reason;
 
-    protected VehicleVanishEvent(@Nonnull Vehicle<? extends PhysicsObject> vehicle, @Nonnull Reason reason) {
+    public VehicleVanishEvent(@Nonnull T vehicle, @Nonnull Reason reason) {
         super(vehicle);
         this.reason = reason;
     }

@@ -1,6 +1,5 @@
 package minevalley.fastcar.api.event;
 
-import minevalley.fastcar.api.physics.PhysicsObject;
 import minevalley.fastcar.api.vehicle.Vehicle;
 
 import javax.annotation.Nonnull;
@@ -9,10 +8,10 @@ import javax.annotation.Nonnull;
  * This event is triggered whenever a vehicle is spawned into the world.
  */
 @SuppressWarnings("unused")
-public class VehicleSpawnEvent extends VehicleEvent {
+public class VehicleSpawnEvent<T extends Vehicle<T>> extends VehicleEvent<T> {
 
 
-    protected VehicleSpawnEvent(@Nonnull Vehicle<? extends PhysicsObject> vehicle) {
+    public VehicleSpawnEvent(@Nonnull T vehicle) {
         super(vehicle);
     }
 

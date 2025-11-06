@@ -1,7 +1,6 @@
 package minevalley.fastcar.api.event;
 
 import lombok.Getter;
-import minevalley.fastcar.api.physics.PhysicsObject;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -10,14 +9,14 @@ import javax.annotation.Nonnull;
 
 @Getter
 @SuppressWarnings("unused")
-public abstract class VehicleEvent extends Event {
+public abstract class VehicleEvent<T extends Vehicle<T>> extends Event {
 
     private static final HandlerList handlerList = new HandlerList();
 
     @Nonnull
-    private final Vehicle<? extends PhysicsObject> vehicle;
+    private final T vehicle;
 
-    protected VehicleEvent(@Nonnull Vehicle<? extends PhysicsObject> vehicle) {
+    protected VehicleEvent(@Nonnull T vehicle) {
         this.vehicle = vehicle;
     }
 

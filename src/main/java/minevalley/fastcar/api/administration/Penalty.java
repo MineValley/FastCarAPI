@@ -1,7 +1,6 @@
 package minevalley.fastcar.api.administration;
 
 import minevalley.core.api.users.User;
-import minevalley.fastcar.api.physics.PhysicsObject;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;
 
@@ -61,7 +60,7 @@ public interface Penalty {
      */
     @Nonnull
     @Contract(pure = true)
-    Vehicle<? extends PhysicsObject> vehicle();
+    Vehicle vehicle();
 
     /**
      * The amount of the penalty in cents.
