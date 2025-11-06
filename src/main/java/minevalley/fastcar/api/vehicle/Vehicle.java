@@ -1,12 +1,13 @@
 package minevalley.fastcar.api.vehicle;
 
 import minevalley.core.api.Registrant;
+import minevalley.fastcar.api.physics.PhysicsObject;
 import minevalley.fastcar.api.production.Model;
 import minevalley.fastcar.api.production.VehicleColor;
-import minevalley.fastcar.api.physics.PhysicsObject;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
  * Represents any kind of vehicle (e.g., car, bike, aircraft, motorcycle, ...).
@@ -36,10 +37,12 @@ public interface Vehicle<T extends PhysicsObject> {
 
     /**
      * Gets the physics object associated with this vehicle.
+     * <p>
+     * <b>Note:</b> This may return null if the vehicle is not currently spawned in the world. This is the case for new vehicles and for vehicles that have been towed.
      *
      * @return the physics object
      */
-    @Nonnull
+    @Nullable
     @Contract(pure = true)
     T physicsObject();
 

@@ -5,6 +5,11 @@ import org.jetbrains.annotations.Contract;
 import javax.annotation.Nonnull;
 import java.util.Set;
 
+/**
+ * Every vehicle model is produced by a specific manufacturer.
+ * Manufacturers can have multiple models in their product range.
+ * Manufacturers are capable of producing vehicles of different types (e.g., cars, motorcycles, trucks, etc.).
+ */
 @SuppressWarnings("unused")
 public interface Manufacturer {
 
