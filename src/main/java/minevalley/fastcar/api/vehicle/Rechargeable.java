@@ -22,5 +22,5 @@ public interface Rechargeable {
      * @param chargeLevel the new charge level (0-1)
      * @throws IllegalArgumentException if the charge level is less than 0 or greater than 1
      */
-    void setFuelLevel(@Nonnegative float chargeLevel) throws IllegalArgumentException;
+    void setChargeLevel(@Nonnegative float chargeLevel) throws IllegalArgumentException;
 }
