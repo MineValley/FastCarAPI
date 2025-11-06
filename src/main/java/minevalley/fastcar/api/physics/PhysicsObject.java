@@ -11,7 +11,7 @@ public interface PhysicsObject<T extends Vehicle<T>> {
 
     @Nonnull
     @Contract(pure = true)
-    T getVehicle();
+    T vehicle();
 
     /**
      * Get the speed of the object in km/h.
