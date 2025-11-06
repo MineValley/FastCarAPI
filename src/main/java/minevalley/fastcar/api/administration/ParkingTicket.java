@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Contract;
 public interface ParkingTicket {
 
     /**
-     * The time the parking ticket was issued in milliseconds since epoch.
+     * The time the parking ticket was issued in milliseconds since the epoch.
      *
      * @return time issued in milliseconds since epoch
      */
@@ -18,7 +18,7 @@ public interface ParkingTicket {
     long timeIssued();
 
     /**
-     * The time until the parking ticket is valid in milliseconds since epoch.
+     * The time until the parking ticket is valid in milliseconds since the epoch.
      *
      * @return time until valid in milliseconds since epoch
      */

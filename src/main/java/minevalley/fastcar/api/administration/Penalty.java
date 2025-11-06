@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
  * Penalties can be issued by the police for various infractions, such as parking violations or traffic offenses.
  */
 @SuppressWarnings("unused")
-public interface Penalty {
+public interface Penalty<T extends Vehicle<T>> {
 
     /**
      * The reason for the penalty.
@@ -60,7 +60,7 @@ public interface Penalty {
      */
     @Nonnull
     @Contract(pure = true)
-    Vehicle vehicle();
+    T vehicle();
 
     /**
      * The amount of the penalty in cents.

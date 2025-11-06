@@ -3,6 +3,7 @@ package minevalley.fastcar.api.event;
 import lombok.Getter;
 import lombok.Setter;
 import minevalley.fastcar.api.administration.Penalty;
+import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
@@ -17,7 +18,7 @@ import javax.annotation.Nonnull;
  */
 @Getter
 @SuppressWarnings("unused")
-public class PenaltyIssuedEvent implements Cancellable {
+public class PenaltyIssuedEvent<T extends Vehicle<T>> implements Cancellable {
 
     private static final HandlerList handlerList = new HandlerList();
 
@@ -25,9 +26,9 @@ public class PenaltyIssuedEvent implements Cancellable {
     private boolean cancelled = false;
 
     @Nonnull
-    private final Penalty penalty;
+    private final Penalty<?> penalty;
 
-    public PenaltyIssuedEvent(@Nonnull Penalty penalty) {
+    public PenaltyIssuedEvent(@Nonnull Penalty<T> penalty) {
         this.penalty = penalty;
     }
 
