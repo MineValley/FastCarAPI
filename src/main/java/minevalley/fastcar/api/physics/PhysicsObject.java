@@ -1,12 +1,15 @@
 package minevalley.fastcar.api.physics;
 
 import minevalley.core.api.users.OnlineUser;
+import minevalley.fastcar.api.production.shape.Addon;
+import minevalley.fastcar.api.production.shape.Seat;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.Location;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Map;
 import java.util.Set;
 
 @SuppressWarnings("unused")
@@ -31,13 +34,15 @@ public interface PhysicsObject<T extends Vehicle<T>> {
     OnlineUser getDriver();
 
     /**
-     * Get the passengers of the vehicle, including the driver.
+     * Get a map of all occupied seats and their corresponding occupants.
+     * <p>
+     * <b>Note:</b> This map only includes seats that are currently occupied, including the driver seat if occupied.
      *
-     * @return the set of passengers
+     * @return a map of occupied seats to their occupants
      */
     @Nonnull
     @Contract(pure = true)
-    Set<OnlineUser> getPassengers();
+    Map<Seat, OnlineUser> getPassengers();
 
     /**
      * Get the current location of the object.
@@ -55,4 +60,13 @@ public interface PhysicsObject<T extends Vehicle<T>> {
      */
     @Contract(pure = true)
     float getSpeed();
+
+    /**
+     * Get a set of all addons currently attached to the vehicle.
+     *
+     * @return a set of attached addons
+     */
+    @Nonnull
+    @Contract(pure = true)
+    Set<Addon> getAttachedAddons();
 }
