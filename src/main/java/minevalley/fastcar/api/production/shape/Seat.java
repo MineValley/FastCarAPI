@@ -29,7 +29,7 @@ public enum Seat implements Attachment {
 
     @Override
     @Nonnull
-    public ItemBuilder getItemStack() {
+    public ItemBuilder getItem() {
         return Core.createItem(
                 this == DRIVER
                         ? "142120ec49499309c1e7935b84ad779918a882331b24410f5a873c9fa895ebaf"
