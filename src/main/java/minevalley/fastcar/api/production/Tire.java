@@ -1,5 +1,6 @@
 package minevalley.fastcar.api.production;
 
+import minevalley.fastcar.api.vehicle.car.Car;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
@@ -52,4 +53,15 @@ public interface Tire {
      */
     @Contract(pure = true)
     float durabilityFactor();
+
+    /**
+     * The durability of the tire when new.
+     * Every driven kilometer and every accident reduces the durability.
+     * The higher the value, the longer the tire lasts.
+     *
+     * @return the durability
+     * @see Car#tireDurability()
+     */
+    @Contract(pure = true)
+    int durability();
 }

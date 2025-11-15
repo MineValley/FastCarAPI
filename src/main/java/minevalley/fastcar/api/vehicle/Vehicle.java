@@ -3,7 +3,6 @@ package minevalley.fastcar.api.vehicle;
 import minevalley.core.api.Registrant;
 import minevalley.fastcar.api.physics.PhysicsObject;
 import minevalley.fastcar.api.production.Model;
-import minevalley.fastcar.api.production.Tire;
 import minevalley.fastcar.api.production.VehicleColor;
 import org.jetbrains.annotations.Contract;
 
@@ -63,13 +62,4 @@ public interface Vehicle<T extends Vehicle<T>> {
     @Nonnull
     @Contract(pure = true)
     Registrant getOwner();
-
-    /**
-     * Gets the tires of this vehicle.
-     *
-     * @return the tires
-     */
-    @Nonnull
-    @Contract(pure = true)
-    Tire tires();
 }
