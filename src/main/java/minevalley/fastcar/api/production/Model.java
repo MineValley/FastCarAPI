@@ -4,6 +4,7 @@ import minevalley.fastcar.api.production.shape.Addon;
 import minevalley.fastcar.api.production.shape.Attachment;
 import minevalley.fastcar.api.production.shape.Seat;
 import minevalley.fastcar.api.production.shape.VehicleComponent;
+import org.bukkit.Material;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
@@ -33,6 +34,25 @@ public interface Model {
     @Nonnull
     @Contract(pure = true)
     Manufacturer manufacturer();
+
+    /**
+     * Gets the base material of this model.
+     *
+     * @return The material.
+     * @see #customModelData()
+     */
+    @Nonnull
+    @Contract(pure = true)
+    Material material();
+
+    /**
+     * Gets the custom model data of this model.
+     *
+     * @return The custom model data.
+     * @see #material()
+     */
+    @Contract(pure = true)
+    int customModelData();
 
     /**
      * Gets the attachments of this model.
@@ -77,4 +97,59 @@ public interface Model {
     @Nonnull
     @Contract(pure = true)
     Set<VehicleComponent> components();
+
+    /**
+     * Checks if this model has a roof.
+     * This is naturally false for all kinds of motorcycles, bikes, scooters, etc.
+     *
+     * @return True if it has a roof, false otherwise.
+     */
+    @Contract(pure = true)
+    boolean hasRoof();
+
+    /**
+     * Gets this model's air resistance factor.
+     *
+     * @return The air resistance factor (between 0 and 1, where 0 means no air resistance and 1 means full air resistance).
+     */
+    @Contract(pure = true)
+    float airResistance();
+
+    /**
+     * Gets this model's mass in kilograms.
+     *
+     * @return The mass.
+     */
+    @Contract(pure = true)
+    int mass();
+
+    /**
+     * Gets the power of this model in horsepower (HP).
+     *
+     * @return The power.
+     * @see #powerInKilowatts()
+     */
+    @Contract(pure = true)
+    int powerInHorsePower();
+
+    /**
+     * Gets the power of this model in kilowatts (kW).
+     *
+     * @return The power.
+     * @see #powerInHorsePower()
+     */
+    @Contract(pure = true)
+    default int powerInKilowatts() {
+        return Math.round(powerInHorsePower() * 0.7457f);
+    }
+
+    /**
+     * Gets the brake force of this model.
+     * <p>
+     * <b>Note:</b> This force is still affected by the tires' grip and the air resistance.
+     *
+     * @return The brake force.
+     */
+    @Contract(pure = true)
+    int brakeForce();
 }
