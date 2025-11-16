@@ -46,15 +46,6 @@ public interface Tire {
     float speedFactor();
 
     /**
-     * The durability factor of the tire.
-     * A higher value means more durability.
-     *
-     * @return the durability factor (0.0 - 1.0)
-     */
-    @Contract(pure = true)
-    float durabilityFactor();
-
-    /**
      * The durability of the tire when new.
      * Every driven kilometer and every accident reduces the durability.
      * The higher the value, the longer the tire lasts.
