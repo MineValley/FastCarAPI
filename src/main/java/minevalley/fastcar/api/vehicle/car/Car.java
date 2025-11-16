@@ -1,7 +1,6 @@
 package minevalley.fastcar.api.vehicle.car;
 
 import minevalley.fastcar.api.production.Tire;
-import minevalley.fastcar.api.vehicle.Licensed;
 import minevalley.fastcar.api.vehicle.Storage;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;
@@ -10,7 +9,7 @@ import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 
 @SuppressWarnings("unused")
-public interface Car<T extends Vehicle<T>> extends Vehicle<T>, Storage, Licensed {
+public interface Car<T extends Vehicle<T>> extends Vehicle<T>, Storage {
 
     /**
      * Gets the tires of this vehicle.
