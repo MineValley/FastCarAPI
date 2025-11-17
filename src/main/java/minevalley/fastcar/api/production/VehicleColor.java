@@ -11,4 +11,16 @@ import java.awt.*;
  */
 @SuppressWarnings("unused")
 public record VehicleColor(@Nonnull String name, @Nonnull Color color) {
+
+    public VehicleColor {
+        if (name == null) {
+            throw new IllegalArgumentException("VehicleColor name cannot be null");
+        }
+        if (name.isBlank()) {
+            throw new IllegalArgumentException("VehicleColor name cannot be blank");
+        }
+        if (color == null) {
+            throw new IllegalArgumentException("VehicleColor color cannot be null");
+        }
+    }
 }
