@@ -20,18 +20,12 @@ public interface Vehicle<T extends Vehicle<T>> {
     /**
      * Gets the license plate of this vehicle.
      * Every vehicle has a unique license plate.
-     * <p>
-     * Bicycles all have the prefix "BI KE"
-     * <br>
-     * Team cars have the prefix "TE AM"
-     * <br>
-     * All other vehicles use the prefix "MV"
      *
      * @return the license plate
      */
     @Nonnull
     @Contract(pure = true)
-    String licensePlate();
+    LicensePlate licensePlate();
 
     /**
      * Gets the model of this vehicle.
