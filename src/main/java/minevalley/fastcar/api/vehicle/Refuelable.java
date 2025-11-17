@@ -1,11 +1,22 @@
 package minevalley.fastcar.api.vehicle;
 
+import minevalley.fastcar.api.production.RefuelableModel;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnegative;
+import javax.annotation.Nonnull;
 
 @SuppressWarnings("unused")
 public interface Refuelable {
+
+    /**
+     * Gets the refuelable model of the vehicle.
+     *
+     * @return the refuelable model
+     */
+    @Nonnull
+    @Contract(pure = true)
+    RefuelableModel getRefuelableModel();
 
     /**
      * Gets the fuel level of the vehicle.

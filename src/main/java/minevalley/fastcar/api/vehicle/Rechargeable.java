@@ -1,11 +1,22 @@
 package minevalley.fastcar.api.vehicle;
 
+import minevalley.fastcar.api.production.RechargeableModel;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnegative;
+import javax.annotation.Nonnull;
 
 @SuppressWarnings("unused")
 public interface Rechargeable {
+
+    /**
+     * Gets the rechargeable model of the vehicle.
+     *
+     * @return the rechargeable model
+     */
+    @Nonnull
+    @Contract(pure = true)
+    RechargeableModel getRechargeableModel();
 
     /**
      * Gets the charge level of the vehicle.
