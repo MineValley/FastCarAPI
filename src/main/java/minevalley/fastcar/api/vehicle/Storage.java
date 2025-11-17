@@ -46,6 +46,8 @@ public interface Storage {
      *
      * @return the total amount of storage lines
      */
+    @Nonnegative
+    @Contract(pure = true)
     default int amountOfTotalStorageLines() {
         return amountOfTotalStorageSlots() / 9;
     }
