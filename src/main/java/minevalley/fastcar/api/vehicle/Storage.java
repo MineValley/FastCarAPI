@@ -1,5 +1,6 @@
 package minevalley.fastcar.api.vehicle;
 
+import minevalley.core.api.users.OnlineUser;
 import minevalley.fastcar.api.production.StorageModel;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Contract;
@@ -50,4 +51,13 @@ public interface Storage {
     default int amountOfFreeStorageSlots() {
         return getStorageModel().amountOfTotalStorageSlots() - amountOfUsedStorageSlots();
     }
+
+    /**
+     * Opens the storage of this vehicle for the given user.
+     *
+     * @param user     the non-null user for whom to open the storage
+     * @param readOnly whether the storage should be opened in read-only mode
+     * @throws IllegalArgumentException if the user is null
+     */
+    void openStorage(@Nonnull OnlineUser user, boolean readOnly) throws IllegalArgumentException;
 }
