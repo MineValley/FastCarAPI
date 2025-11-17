@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
  * Electric vehicle plates end with <code>E</code>.
  */
 @SuppressWarnings("unused")
-public interface LicensePlate {
+public record LicensePlate(@Nonnull String raw) {
 
     /**
      * Checks if the license plate is a team plate
@@ -23,7 +23,9 @@ public interface LicensePlate {
      * @return true if it is a team plate, false otherwise
      */
     @Contract(pure = true)
-    boolean isTeamPlate();
+    boolean isTeamPlate() {
+        return raw.startsWith("TEAM");
+    }
 
     /**
      * Checks if the license plate is for a bike
@@ -33,7 +35,9 @@ public interface LicensePlate {
      * @return true if it is a bike plate, false otherwise
      */
     @Contract(pure = true)
-    boolean isBike();
+    boolean isBike() {
+        return raw.startsWith("BIKE");
+    }
 
     /**
      * Checks if the license plate is for an electric vehicle
@@ -43,17 +47,9 @@ public interface LicensePlate {
      * @return true if it is an electric vehicle plate, false otherwise
      */
     @Contract(pure = true)
-    boolean isElectric();
-
-    /**
-     * Returns the raw string representation of the license plate as stored in the database
-     *
-     * @return the raw license plate string
-     * @see #toString()
-     */
-    @Nonnull
-    @Contract(pure = true)
-    String raw();
+    public boolean isElectric() {
+        return raw.endsWith("E");
+    }
 
     /**
      * Returns the string representation of the license plate
@@ -66,5 +62,7 @@ public interface LicensePlate {
     @Override
     @Nonnull
     @Contract(pure = true)
-    String toString();
+    public String toString() {
+        return raw.substring(0, 2) + " " + raw.substring(2, 4) + " " + raw.substring(4);
+    }
 }
