@@ -10,7 +10,7 @@ import javax.annotation.Nonnull;
  *
  * <p>Semantics:
  * <ul>
- *   <li>{@link #startTime()} returns the epoch timestamp in milliseconds (as produced by {@link System#currentTimeMillis()})
+ *   <li>{@link #timeOfIssuing()} returns the epoch timestamp in milliseconds (as produced by {@link System#currentTimeMillis()})
  *       of the ticket issuance or — if the ticket has been marked paid — the timestamp of the last payment.</li>
  *   <li>{@link #wasPaid()} indicates whether the ticket has been marked as paid since issuance.
  *       It does not express the temporal validity of the payment (see {@link #allowsToLeave()}).</li>
@@ -32,23 +32,24 @@ public interface ParkingTicket {
      * @return epoch milliseconds (>= 0)
      */
     @Contract(pure = true)
-    long startTime();
+    long timeOfIssuing();
 
     /**
      * The timestamp (epoch milliseconds) since when the ticket has been unpaid.
      * <br>
-     * This is equivalent to {@link #startTime()} if the ticket was not paid yet
+     * This is equivalent to {@link #timeOfIssuing()} if the ticket was not paid yet
      *
      * @return epoch milliseconds (>= 0)
+     * @see #getUnpaidTimeInMinutes()
      */
     @Contract(pure = true)
     long unpaidSince();
 
     /**
-     * Returns the elapsed time since {@link #startTime()} in whole minutes.
-     * Negative differences (for example if {@link #startTime()} is in the future) are clamped to 0.
+     * Returns the elapsed time since {@link #timeOfIssuing()} in whole minutes.
+     * Negative differences (for example if {@link #timeOfIssuing()} is in the future) are clamped to 0.
      *
-     * @return number of whole minutes since {@link #startTime()} (non-negative)
+     * @return number of whole minutes since {@link #timeOfIssuing()} (non-negative)
      */
     @Contract(pure = true)
     default long getUnpaidTimeInMinutes() {
@@ -79,6 +80,8 @@ public interface ParkingTicket {
 
     /**
      * Marks this ticket as paid.
+     *
+     * @see #wasPaid()
      */
     void markAsPaid();
 
@@ -90,6 +93,7 @@ public interface ParkingTicket {
      * Use {@link #allowsToLeave()} to verify ifthe vehicle is actually allowed to leave.
      *
      * @return {@code true} if the ticket was marked paid, {@code false} otherwise
+     * @see #allowsToLeave()
      */
     boolean wasPaid();
 
