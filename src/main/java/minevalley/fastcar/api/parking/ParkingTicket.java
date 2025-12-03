@@ -1,4 +1,4 @@
-package minevalley.fastcar.api.administration;
+package minevalley.fastcar.api.parking;
 
 import minevalley.core.api.users.User;
 import org.jetbrains.annotations.Contract;
@@ -27,7 +27,7 @@ public interface ParkingTicket {
     int LEEWAY_IN_MINUTES = 5;
 
     /**
-     * The timestamp (epoch milliseconds) of ticket issuance or of the last payment if the ticket was paid.
+     * The timestamp (epoch milliseconds) of ticket issuance.
      *
      * @return epoch milliseconds (>= 0)
      */
@@ -35,14 +35,24 @@ public interface ParkingTicket {
     long startTime();
 
     /**
+     * The timestamp (epoch milliseconds) since when the ticket has been unpaid.
+     * <br>
+     * This is equivalent to {@link #startTime()} if the ticket was not paid yet
+     *
+     * @return epoch milliseconds (>= 0)
+     */
+    @Contract(pure = true)
+    long unpaidSince();
+
+    /**
      * Returns the elapsed time since {@link #startTime()} in whole minutes.
      * Negative differences (for example if {@link #startTime()} is in the future) are clamped to 0.
      *
-     * @return number of whole minutes since {@link #startTime()} (non\-negative)
+     * @return number of whole minutes since {@link #startTime()} (non-negative)
      */
     @Contract(pure = true)
     default long getUnpaidTimeInMinutes() {
-        long diffMillis = System.currentTimeMillis() - startTime();
+        long diffMillis = System.currentTimeMillis() - unpaidSince();
         if (diffMillis <= 0L) {
             return 0L;
         }
@@ -57,6 +67,15 @@ public interface ParkingTicket {
     @Nonnull
     @Contract(pure = true)
     User getUser();
+
+    /**
+     * The garage where the ticket was issued.
+     *
+     * @return issuing garage
+     */
+    @Nonnull
+    @Contract(pure = true)
+    Garage getGarage();
 
     /**
      * Marks this ticket as paid.
