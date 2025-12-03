@@ -61,13 +61,13 @@ public interface ParkingTicket {
     }
 
     /**
-     * The user who issued the ticket.
+     * The user who received the ticket.
      *
-     * @return issuing user
+     * @return user receiving the ticket
      */
     @Nonnull
     @Contract(pure = true)
-    User getUser();
+    User recipient();
 
     /**
      * The garage where the ticket was issued.
@@ -79,11 +79,20 @@ public interface ParkingTicket {
     Garage getGarage();
 
     /**
-     * Marks this ticket as paid.
+     * Marks this ticket as paid now.
      *
      * @see #wasPaid()
      */
-    void markAsPaid();
+    default void markAsPaid() {
+        markAsPaid(System.currentTimeMillis());
+    }
+
+    /**
+     * Marks this ticket as paid at the given timestamp.
+     *
+     * @see #wasPaid()
+     */
+    void markAsPaid(long paymentTimeMillis);
 
     /**
      * Returns whether this ticket was marked as paid since issuance.
