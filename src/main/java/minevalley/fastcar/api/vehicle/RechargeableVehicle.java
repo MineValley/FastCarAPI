@@ -7,7 +7,7 @@ import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 
 @SuppressWarnings("unused")
-public interface Rechargeable {
+public interface RechargeableVehicle {
 
     /**
      * Gets the rechargeable model of the vehicle.

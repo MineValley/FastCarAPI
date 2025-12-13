@@ -1,10 +1,9 @@
 package minevalley.fastcar.api.production;
 
-import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;
 
 @SuppressWarnings("unused")
-public interface PoweredModel<T extends Vehicle<T>> extends Model<T> {
+public interface PoweredModel {
 
     /**
      * Gets the power of this model in horsepower (HP).

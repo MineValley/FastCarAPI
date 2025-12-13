@@ -1,7 +1,7 @@
 package minevalley.fastcar.api.vehicle.car;
 
-import minevalley.fastcar.api.vehicle.Rechargeable;
+import minevalley.fastcar.api.vehicle.RechargeableVehicle;
 
 @SuppressWarnings("unused")
-public interface ElectricCar extends Car<ElectricCar>, Rechargeable {
+public interface ElectricCar extends Car<ElectricCar>, RechargeableVehicle {
 }

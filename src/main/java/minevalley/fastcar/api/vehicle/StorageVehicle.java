@@ -12,7 +12,7 @@ import javax.annotation.Nonnull;
  * Represents a vehicle that has storage capabilities (e.g. cars, helicopters, ...)
  */
 @SuppressWarnings("unused")
-public interface Storage {
+public interface StorageVehicle {
 
     /**
      * Returns the {@link StorageModel} of this vehicle.

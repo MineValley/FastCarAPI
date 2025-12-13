@@ -1,11 +1,11 @@
 package minevalley.fastcar.api.vehicle.scooter;
 
-import minevalley.fastcar.api.vehicle.Refuelable;
-import minevalley.fastcar.api.vehicle.Storage;
+import minevalley.fastcar.api.vehicle.RefuelableVehicle;
+import minevalley.fastcar.api.vehicle.StorageVehicle;
 import minevalley.fastcar.api.vehicle.Vehicle;
 
 @SuppressWarnings("unused")
-public interface CombustionScooter extends Vehicle<CombustionScooter>, Refuelable, Storage {
+public interface CombustionScooter extends Vehicle<CombustionScooter>, RefuelableVehicle, StorageVehicle {
 
 
 }
