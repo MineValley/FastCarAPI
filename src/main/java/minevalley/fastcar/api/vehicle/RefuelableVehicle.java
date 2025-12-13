@@ -16,7 +16,7 @@ public interface RefuelableVehicle {
      */
     @Nonnull
     @Contract(pure = true)
-    RefuelableModel getRefuelableModel();
+    RefuelableModel model();
 
     /**
      * Gets the fuel level of the vehicle.

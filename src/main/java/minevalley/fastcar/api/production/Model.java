@@ -20,7 +20,7 @@ public interface Model<T extends Vehicle<T>> {
 
     @Nonnull
     @Contract(pure = true)
-    Class<T> vehicleClass();
+    Class<? extends T> vehicleClass();
 
     /**
      * Gets the name of this model.

@@ -21,7 +21,7 @@ public interface StorageVehicle {
      */
     @Nonnull
     @Contract(pure = true)
-    StorageModel getStorageModel();
+    StorageModel model();
 
     /**
      * Returns the contents of the vehicle's storage as an array of {@link ItemStack}.
@@ -49,7 +49,7 @@ public interface StorageVehicle {
     @Nonnegative
     @Contract(pure = true)
     default int amountOfFreeStorageSlots() {
-        return getStorageModel().amountOfTotalStorageSlots() - amountOfUsedStorageSlots();
+        return model().amountOfTotalStorageSlots() - amountOfUsedStorageSlots();
     }
 
     /**

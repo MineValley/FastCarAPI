@@ -16,7 +16,7 @@ public interface RechargeableVehicle {
      */
     @Nonnull
     @Contract(pure = true)
-    RechargeableModel getRechargeableModel();
+    RechargeableModel model();
 
     /**
      * Gets the charge level of the vehicle.

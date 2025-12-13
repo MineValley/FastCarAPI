@@ -6,5 +6,4 @@ import minevalley.fastcar.api.vehicle.car.Car;
 
 public interface CarModel<T extends Car<T>> extends Model<T>, StorageModel {
 
-
 }
