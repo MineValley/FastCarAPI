@@ -34,7 +34,7 @@ public interface Vehicle<T extends Vehicle<T>> {
      */
     @Nonnull
     @Contract(pure = true)
-    Model model();
+    Model<T> model();
 
     /**
      * Gets the color of this vehicle.

@@ -4,6 +4,7 @@ import minevalley.fastcar.api.production.shape.Addon;
 import minevalley.fastcar.api.production.shape.Attachment;
 import minevalley.fastcar.api.production.shape.Seat;
 import minevalley.fastcar.api.production.shape.VehicleComponent;
+import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.Material;
 import org.jetbrains.annotations.Contract;
 
@@ -15,7 +16,11 @@ import java.util.Set;
  * Every vehicle has a model. All vehicles of the same model share its common characteristics and features.
  */
 @SuppressWarnings("unused")
-public interface Model {
+public interface Model<T extends Vehicle<T>> {
+
+    @Nonnull
+    @Contract(pure = true)
+    Class<T> vehicleClass();
 
     /**
      * Gets the name of this model.
