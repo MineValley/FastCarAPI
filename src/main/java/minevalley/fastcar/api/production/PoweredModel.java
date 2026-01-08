@@ -12,16 +12,16 @@ public interface PoweredModel {
      * @see #powerInKilowatts()
      */
     @Contract(pure = true)
-    int powerInHorsePower();
+    int powerInHorsepower();
 
     /**
      * Gets the power of this model in kilowatts (kW).
      *
      * @return The power.
-     * @see #powerInHorsePower()
+     * @see #powerInHorsepower()
      */
     @Contract(pure = true)
     default int powerInKilowatts() {
-        return Math.round(powerInHorsePower() * 0.7457f);
+        return Math.round(powerInHorsepower() * 0.7457f);
     }
 }
