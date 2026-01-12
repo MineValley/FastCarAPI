@@ -113,9 +113,9 @@ public interface Model<T extends Vehicle<T>> {
     boolean hasRoof();
 
     /**
-     * Gets this model's air resistance factor.
+     * Gets this model's air resistance factor, where higher values mean more air resistance, the lowest possible value is 0 and the default is 1.0.
      *
-     * @return The air resistance factor (between 0 and 1, where 0 means no air resistance and 1 means full air resistance).
+     * @return The air resistance factor
      */
     @Contract(pure = true)
     float airResistance();
@@ -129,12 +129,12 @@ public interface Model<T extends Vehicle<T>> {
     int mass();
 
     /**
-     * Gets the brake force of this model.
+     * Gets the brake force of this model, where higher values mean stronger braking, the lowest possible value is 0 and the default is 1.0.
      * <p>
      * <b>Note:</b> This force is still affected by the tires' grip and the air resistance.
      *
      * @return The brake force.
      */
     @Contract(pure = true)
-    int brakeForce();
+    float brakeForce();
 }
