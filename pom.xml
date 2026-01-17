@@ -8,7 +8,6 @@
 
     <properties>
         <version>0.1.4</version>
-        <core-api.version>1.299.5</core-api.version>
 
         <lombok.version>1.18.30</lombok.version>
 
@@ -99,10 +98,11 @@
         <dependency>
             <groupId>minevalley.core</groupId>
             <artifactId>api</artifactId>
-            <version>${core-api.version}</version>
+            <version>1.300.2</version>
         </dependency>
 
         <!-- Paper -->
+        <!--suppress VulnerableLibrariesLocal -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
