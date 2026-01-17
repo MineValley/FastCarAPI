@@ -76,19 +76,18 @@ Vehicles are accessed through their interfaces, which provide methods for:
 
 ```
 Vehicle (base interface)
-├── RechargeableVehicle (electric vehicles)
-├── RefuelableVehicle (combustion vehicles)
-├── StorageVehicle (vehicles with storage)
-├── Car
-│   ├── ElectricCar
-│   └── CombustionCar
-├── Motorcycle
-├── Scooter
-│   ├── ElectricScooter
-│   └── CombustionScooter
+├── RechargeableVehicle (electric vehicles - mixin)
+├── RefuelableVehicle (combustion vehicles - mixin)
+├── StorageVehicle (vehicles with storage - mixin)
+├── Car (base for cars, extends StorageVehicle)
+│   ├── ElectricCar (extends Car, RechargeableVehicle)
+│   └── CombustionCar (extends Car, RefuelableVehicle)
+├── Motorcycle (extends RefuelableVehicle, StorageVehicle)
+├── ElectricScooter (extends RechargeableVehicle, StorageVehicle)
+├── CombustionScooter (extends RefuelableVehicle, StorageVehicle)
 ├── Bicycle
-│   └── Pedelec
-└── Helicopter
+├── Pedelec (extends RechargeableVehicle)
+└── Helicopter (extends RefuelableVehicle, StorageVehicle)
 ```
 
 ### Models and Manufacturing
