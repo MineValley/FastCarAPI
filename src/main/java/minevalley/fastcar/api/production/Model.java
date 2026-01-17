@@ -11,6 +11,7 @@ import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -77,7 +78,7 @@ public interface Model<T extends Vehicle<T>> {
      */
     @Nonnull
     @Contract(pure = true)
-    Set<Seat> seats();
+    HashMap<Seat, Vector> seats();
 
     /**
      * Gets the total amount of seats of this model.
@@ -103,7 +104,7 @@ public interface Model<T extends Vehicle<T>> {
      */
     @Nonnull
     @Contract(pure = true)
-    Set<VehicleComponent> components();
+    HashMap<VehicleComponent, List<Vector>> components();
 
     /**
      * Checks if this model has a roof.
