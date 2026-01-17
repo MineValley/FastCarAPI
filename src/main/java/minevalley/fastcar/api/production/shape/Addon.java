@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import minevalley.core.api.Core;
 import minevalley.core.api.utils.ItemBuilder;
-import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 
 import javax.annotation.Nonnull;
@@ -29,6 +28,6 @@ public enum Addon implements Attachment {
 
     @Override
     public @Nonnull ItemBuilder getItem() {
-        return Core.createItem(skull).setDisplayName(Component.text(displayName, NamedTextColor.GOLD));
+        return Core.createItem(skull).setDisplayName(displayName, NamedTextColor.GOLD);
     }
 }

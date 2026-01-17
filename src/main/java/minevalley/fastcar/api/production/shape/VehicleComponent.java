@@ -27,6 +27,6 @@ public enum VehicleComponent implements Attachment {
 
     @Override
     public @Nonnull ItemBuilder getItem() {
-        return Core.createItem(skull).setDisplayName(Component.text(displayName, NamedTextColor.GOLD));
+        return Core.createItem(skull).setDisplayName(displayName, NamedTextColor.GOLD);
     }
 }

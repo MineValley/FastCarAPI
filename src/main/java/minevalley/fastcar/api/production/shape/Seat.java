@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import minevalley.core.api.Core;
 import minevalley.core.api.utils.ItemBuilder;
-import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 
 import javax.annotation.Nonnull;
@@ -34,6 +33,6 @@ public enum Seat implements Attachment {
                 this == DRIVER
                         ? "142120ec49499309c1e7935b84ad779918a882331b24410f5a873c9fa895ebaf"
                         : "1266462350ec26549193f6eef4fc6036bbd0d4fb25853afd8cae9685bc44ebc8"
-        ).setDisplayName(Component.text(displayName, NamedTextColor.YELLOW));
+        ).setDisplayName(displayName, NamedTextColor.YELLOW);
     }
 }
