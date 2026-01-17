@@ -6,9 +6,11 @@ import minevalley.fastcar.api.production.shape.Seat;
 import minevalley.fastcar.api.production.shape.VehicleComponent;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.Material;
+import org.bukkit.util.Vector;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
+import java.util.HashMap;
 import java.util.Set;
 
 /**
@@ -92,7 +94,7 @@ public interface Model<T extends Vehicle<T>> {
      */
     @Nonnull
     @Contract(pure = true)
-    Set<Addon> addons();
+    HashMap<Addon, Vector> addons();
 
     /**
      * Gets all components of this model.
