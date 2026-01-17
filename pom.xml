@@ -7,7 +7,7 @@
     <name>FastCarAPI</name>
 
     <properties>
-        <version>0.1.5</version>
+        <version>0.1.6</version>
 
         <lombok.version>1.18.30</lombok.version>
 
