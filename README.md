@@ -6,18 +6,18 @@ A comprehensive vehicle management API for Minecraft servers using PaperMC. Fast
 
 ```
 Vehicle (base interface)
-├── RechargeableVehicle (electric vehicles - mixin)
-├── RefuelableVehicle (combustion vehicles - mixin)
-├── StorageVehicle (vehicles with storage - mixin)
-├── Car (base for cars, extends StorageVehicle)
-│   ├── ElectricCar (extends Car, RechargeableVehicle)
-│   └── CombustionCar (extends Car, RefuelableVehicle)
-├── Motorcycle (extends RefuelableVehicle, StorageVehicle)
-├── ElectricScooter (extends RechargeableVehicle, StorageVehicle)
-├── CombustionScooter (extends RefuelableVehicle, StorageVehicle)
+├── RechargeableVehicle
+├── RefuelableVehicle
+├── StorageVehicle
+├── Car
+│   ├── ElectricCar
+│   └── CombustionCar
+├── Motorcycle
+├── ElectricScooter
+├── CombustionScooter
 ├── Bicycle
-├── Pedelec (extends RechargeableVehicle)
-└── Helicopter (extends RefuelableVehicle, StorageVehicle)
+├── Pedelec
+└── Helicopter
 ```
 
 ## Installation
