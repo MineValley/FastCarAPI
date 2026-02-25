@@ -3,7 +3,6 @@ package minevalley.fastcar.api.production;
 import minevalley.fastcar.api.production.shape.Addon;
 import minevalley.fastcar.api.production.shape.Attachment;
 import minevalley.fastcar.api.production.shape.Seat;
-import minevalley.fastcar.api.production.shape.VehicleComponent;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.Material;
 import org.bukkit.util.Vector;
@@ -11,7 +10,6 @@ import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -96,15 +94,6 @@ public interface Model<T extends Vehicle<T>> {
     @Nonnull
     @Contract(pure = true)
     HashMap<Addon, Vector> addons();
-
-    /**
-     * Gets all components of this model.
-     *
-     * @return The set of components.
-     */
-    @Nonnull
-    @Contract(pure = true)
-    HashMap<VehicleComponent, List<Vector>> components();
 
     /**
      * Checks if this model has a roof.
