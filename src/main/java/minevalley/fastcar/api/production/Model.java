@@ -119,14 +119,4 @@ public interface Model<T extends Vehicle<T>> {
      */
     @Contract(pure = true)
     int mass();
-
-    /**
-     * Gets the brake force of this model, where higher values mean stronger braking, the lowest possible value is 0 and the default is 1.0.
-     * <p>
-     * <b>Note:</b> This force is still affected by the tires' grip and the air resistance.
-     *
-     * @return The brake force.
-     */
-    @Contract(pure = true)
-    float brakeForce();
 }
