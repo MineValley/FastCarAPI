@@ -1,15 +1,12 @@
 package minevalley.fastcar.api.production;
 
 import minevalley.fastcar.api.production.shape.Addon;
-import minevalley.fastcar.api.production.shape.Attachment;
 import minevalley.fastcar.api.production.shape.Seat;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.Material;
-import org.bukkit.util.Vector;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
-import java.util.HashMap;
 import java.util.Set;
 
 /**
@@ -61,22 +58,13 @@ public interface Model<T extends Vehicle<T>> {
     int customModelData();
 
     /**
-     * Gets the attachments of this model.
-     *
-     * @return The set of attachments.
-     */
-    @Nonnull
-    @Contract(pure = true)
-    Set<Attachment> attachments();
-
-    /**
      * Gets the seats of this model.
      *
      * @return The set of seats.
      */
     @Nonnull
     @Contract(pure = true)
-    HashMap<Seat, Vector> seats();
+    Set<Seat> seats();
 
     /**
      * Gets the total amount of seats of this model.
@@ -93,7 +81,7 @@ public interface Model<T extends Vehicle<T>> {
      */
     @Nonnull
     @Contract(pure = true)
-    HashMap<Addon, Vector> addons();
+    Set<Addon> addons();
 
     /**
      * Checks if this model has a roof.
