@@ -98,7 +98,7 @@
         <dependency>
             <groupId>minevalley.core</groupId>
             <artifactId>api</artifactId>
-            <version>1.302.5</version>
+            <version>1.304.0</version>
         </dependency>
 
         <!-- Paper -->
