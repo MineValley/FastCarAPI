@@ -29,5 +29,5 @@ public interface Manufacturer {
      */
     @Nonnull
     @Contract(pure = true)
-    Set<Model> models();
+    Set<Model<?>> models();
 }

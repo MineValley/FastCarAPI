@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.parking;
 
-import minevalley.core.api.users.User;
+import minevalley.core.api.user.User;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;

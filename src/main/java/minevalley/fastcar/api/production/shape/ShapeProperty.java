@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.production.shape;
 
-import minevalley.core.api.utils.ItemBuilder;
+import minevalley.core.api.item.ItemBuilder;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;

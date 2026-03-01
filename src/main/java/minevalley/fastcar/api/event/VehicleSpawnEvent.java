@@ -10,7 +10,6 @@ import javax.annotation.Nonnull;
 @SuppressWarnings("unused")
 public class VehicleSpawnEvent<T extends Vehicle<T>> extends VehicleEvent<T> {
 
-
     public VehicleSpawnEvent(@Nonnull T vehicle) {
         super(vehicle);
     }

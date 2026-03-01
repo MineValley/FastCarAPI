@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.physics;
 
-import minevalley.core.api.users.OnlineUser;
+import minevalley.core.api.user.OnlineUser;
 import minevalley.fastcar.api.production.shape.Addon;
 import minevalley.fastcar.api.production.shape.Seat;
 import minevalley.fastcar.api.vehicle.Vehicle;

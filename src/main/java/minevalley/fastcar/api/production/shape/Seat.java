@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import minevalley.core.api.Core;
-import minevalley.core.api.utils.ItemBuilder;
+import minevalley.core.api.item.ItemBuilder;
 import net.kyori.adventure.text.format.NamedTextColor;
 
 import javax.annotation.Nonnull;
