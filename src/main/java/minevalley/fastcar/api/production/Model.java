@@ -3,7 +3,6 @@ package minevalley.fastcar.api.production;
 import minevalley.fastcar.api.production.shape.Addon;
 import minevalley.fastcar.api.production.shape.Seat;
 import minevalley.fastcar.api.vehicle.Vehicle;
-import org.bukkit.Material;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
@@ -39,23 +38,13 @@ public interface Model<T extends Vehicle<T>> {
     Manufacturer manufacturer();
 
     /**
-     * Gets the base material of this model.
+     * Gets the itemModel of this model.
      *
-     * @return The material.
-     * @see #customModelData()
+     * @return itemModel
      */
     @Nonnull
     @Contract(pure = true)
-    Material material();
-
-    /**
-     * Gets the custom model data of this model.
-     *
-     * @return The custom model data.
-     * @see #material()
-     */
-    @Contract(pure = true)
-    int customModelData();
+    String itemModel();
 
     /**
      * Gets the seats of this model.
