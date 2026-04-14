@@ -1,4 +1,4 @@
-package minevalley.fastcar.api.production;
+package minevalley.fastcar.api.characteristics;
 
 @SuppressWarnings("unused")
 public interface RefuelableModel extends PoweredModel {

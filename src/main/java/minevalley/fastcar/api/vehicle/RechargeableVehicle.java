@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.vehicle;
 
-import minevalley.fastcar.api.production.RechargeableModel;
+import minevalley.fastcar.api.characteristics.RechargeableModel;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnegative;

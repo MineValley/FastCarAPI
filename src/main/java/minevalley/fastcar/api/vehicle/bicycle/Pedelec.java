@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.vehicle.bicycle;
 
-import minevalley.fastcar.api.production.bicycle.PedelecModel;
+import minevalley.fastcar.api.characteristics.bicycle.PedelecModel;
 import minevalley.fastcar.api.vehicle.RechargeableVehicle;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;

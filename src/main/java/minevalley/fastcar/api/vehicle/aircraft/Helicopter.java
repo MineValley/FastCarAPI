@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.vehicle.aircraft;
 
-import minevalley.fastcar.api.production.aircraft.HelicopterModel;
+import minevalley.fastcar.api.characteristics.aircraft.HelicopterModel;
 import minevalley.fastcar.api.vehicle.RefuelableVehicle;
 import minevalley.fastcar.api.vehicle.StorageVehicle;
 import minevalley.fastcar.api.vehicle.Vehicle;

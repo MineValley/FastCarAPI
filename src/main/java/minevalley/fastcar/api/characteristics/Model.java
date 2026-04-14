@@ -1,7 +1,7 @@
-package minevalley.fastcar.api.production;
+package minevalley.fastcar.api.characteristics;
 
-import minevalley.fastcar.api.production.shape.Addon;
-import minevalley.fastcar.api.production.shape.Seat;
+import minevalley.fastcar.api.characteristics.shape.Addon;
+import minevalley.fastcar.api.characteristics.shape.Seat;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;
 

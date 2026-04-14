@@ -1,4 +1,4 @@
-package minevalley.fastcar.api.production;
+package minevalley.fastcar.api.characteristics;
 
 import minevalley.fastcar.api.vehicle.car.Car;
 import org.jetbrains.annotations.Contract;

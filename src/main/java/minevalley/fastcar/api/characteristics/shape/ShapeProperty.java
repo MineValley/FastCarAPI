@@ -1,4 +1,4 @@
-package minevalley.fastcar.api.production.shape;
+package minevalley.fastcar.api.characteristics.shape;
 
 import minevalley.core.api.item.ItemBuilder;
 import org.jetbrains.annotations.Contract;

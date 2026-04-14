@@ -2,8 +2,8 @@ package minevalley.fastcar.api.vehicle;
 
 import minevalley.core.api.Registrant;
 import minevalley.fastcar.api.physics.PhysicsObject;
-import minevalley.fastcar.api.production.Model;
-import minevalley.fastcar.api.production.VehicleColor;
+import minevalley.fastcar.api.characteristics.Model;
+import minevalley.fastcar.api.characteristics.VehicleColor;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;

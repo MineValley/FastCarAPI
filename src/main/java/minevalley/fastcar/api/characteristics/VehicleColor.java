@@ -1,4 +1,4 @@
-package minevalley.fastcar.api.production;
+package minevalley.fastcar.api.characteristics;
 
 import javax.annotation.Nonnull;
 import java.awt.*;

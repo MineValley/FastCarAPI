@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.vehicle.scooter;
 
-import minevalley.fastcar.api.production.scooter.ElectricScooterModel;
+import minevalley.fastcar.api.characteristics.scooter.ElectricScooterModel;
 import minevalley.fastcar.api.vehicle.RechargeableVehicle;
 import minevalley.fastcar.api.vehicle.StorageVehicle;
 import minevalley.fastcar.api.vehicle.Vehicle;

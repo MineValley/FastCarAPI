@@ -1,7 +1,7 @@
 package minevalley.fastcar.api.vehicle;
 
 import minevalley.core.api.user.OnlineUser;
-import minevalley.fastcar.api.production.StorageModel;
+import minevalley.fastcar.api.characteristics.StorageModel;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Contract;
 
