@@ -7,6 +7,7 @@ import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
+import java.util.Set;
 
 /**
  * Represents a vehicle that has storage capabilities (e.g. cars, helicopters, ...)
@@ -24,13 +25,13 @@ public interface StorageVehicle {
     StorageModel model();
 
     /**
-     * Returns the contents of the vehicle's storage as an array of {@link ItemStack}.
+     * Returns a set of all itemstacks in this storage.
      *
-     * @return a non-null array containing the current entries of the storage (may contain {@code null} for empty slots)
+     * @return set of all itemstacks in this storage
      */
     @Nonnull
     @Contract(pure = true)
-    ItemStack[] getStorageContents();
+    Set<ItemStack> getStorageContents();
 
     /**
      * Returns the amount of used storage slots in this vehicle's storage.
@@ -39,7 +40,7 @@ public interface StorageVehicle {
      */
     @Nonnegative
     @Contract(pure = true)
-    int amountOfUsedStorageSlots();
+    int getAmountOfUsedStorageSlots();
 
     /**
      * Returns the amount of free storage slots in this vehicle's storage.
@@ -48,8 +49,8 @@ public interface StorageVehicle {
      */
     @Nonnegative
     @Contract(pure = true)
-    default int amountOfFreeStorageSlots() {
-        return model().amountOfTotalStorageSlots() - amountOfUsedStorageSlots();
+    default int getAmountOfFreeStorageSlots() {
+        return model().amountOfTotalStorageSlots() - getAmountOfUsedStorageSlots();
     }
 
     /**
