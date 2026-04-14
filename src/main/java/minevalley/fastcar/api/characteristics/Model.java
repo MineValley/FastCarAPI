@@ -1,12 +1,9 @@
 package minevalley.fastcar.api.characteristics;
 
-import minevalley.fastcar.api.characteristics.shape.Addon;
-import minevalley.fastcar.api.characteristics.shape.Seat;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
-import java.util.Set;
 
 /**
  * A vehicle model represents a specific design or version of a vehicle produced by a manufacturer.
@@ -21,12 +18,23 @@ public interface Model<T extends Vehicle<T>> {
 
     /**
      * Gets the name of this model.
+     * <p>
+     * <b>Note:</b> This can be set individually per model, but if not set, this is the name given to the {@link VehicleBody}.
      *
      * @return The model name.
      */
     @Nonnull
     @Contract(pure = true)
     String name();
+
+    /**
+     * Gets the body used for this model.
+     *
+     * @return body of this model
+     */
+    @Nonnull
+    @Contract(pure = true)
+    VehicleBody body();
 
     /**
      * Gets the manufacturer of this model.
@@ -36,50 +44,6 @@ public interface Model<T extends Vehicle<T>> {
     @Nonnull
     @Contract(pure = true)
     Manufacturer manufacturer();
-
-    /**
-     * Gets the itemModel of this model.
-     *
-     * @return itemModel
-     */
-    @Nonnull
-    @Contract(pure = true)
-    String itemModel();
-
-    /**
-     * Gets the seats of this model.
-     *
-     * @return The set of seats.
-     */
-    @Nonnull
-    @Contract(pure = true)
-    Set<Seat> seats();
-
-    /**
-     * Gets the total amount of seats of this model.
-     *
-     * @return The amount of seats
-     */
-    @Contract(pure = true)
-    int seatCount();
-
-    /**
-     * Gets the addons of this model.
-     *
-     * @return The set of addons.
-     */
-    @Nonnull
-    @Contract(pure = true)
-    Set<Addon> addons();
-
-    /**
-     * Checks if this model has a roof.
-     * This is naturally false for all kinds of motorcycles, bikes, scooters, etc.
-     *
-     * @return True if it has a roof, false otherwise.
-     */
-    @Contract(pure = true)
-    boolean hasRoof();
 
     /**
      * Gets this model's air resistance factor, where higher values mean more air resistance, the lowest possible value is 0 and the default is 1.0.
