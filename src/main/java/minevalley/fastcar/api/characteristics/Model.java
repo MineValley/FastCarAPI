@@ -12,6 +12,11 @@ import javax.annotation.Nonnull;
 @SuppressWarnings("unused")
 public interface Model<T extends Vehicle<T>> {
 
+    /**
+     * Gets the vehicle class that corresponds to this model.
+     *
+     * @return corresponding vehicle class
+     */
     @Nonnull
     @Contract(pure = true)
     Class<? extends T> vehicleClass();
