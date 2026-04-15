@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.vehicle.car;
 
-import minevalley.fastcar.api.characteristics.car.ElectricCarModel;
+import minevalley.fastcar.api.characteristics.type.car.ElectricCarModel;
 import minevalley.fastcar.api.vehicle.RechargeableVehicle;
 import org.jetbrains.annotations.Contract;
 

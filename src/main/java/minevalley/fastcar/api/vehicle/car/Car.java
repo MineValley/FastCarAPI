@@ -1,7 +1,7 @@
 package minevalley.fastcar.api.vehicle.car;
 
 import minevalley.fastcar.api.characteristics.Tire;
-import minevalley.fastcar.api.characteristics.car.CarModel;
+import minevalley.fastcar.api.characteristics.type.car.CarModel;
 import minevalley.fastcar.api.vehicle.StorageVehicle;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;

@@ -1,8 +1,8 @@
 package minevalley.fastcar.api.physics;
 
 import minevalley.core.api.user.OnlineUser;
-import minevalley.fastcar.api.characteristics.shape.Addon;
-import minevalley.fastcar.api.characteristics.shape.Seat;
+import minevalley.fastcar.api.characteristics.body.Addon;
+import minevalley.fastcar.api.characteristics.body.Seat;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.bukkit.Location;
 import org.jetbrains.annotations.Contract;

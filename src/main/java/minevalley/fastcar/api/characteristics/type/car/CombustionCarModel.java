@@ -1,6 +1,6 @@
-package minevalley.fastcar.api.characteristics.car;
+package minevalley.fastcar.api.characteristics.type.car;
 
-import minevalley.fastcar.api.characteristics.RefuelableModel;
+import minevalley.fastcar.api.characteristics.specs.RefuelableModel;
 import minevalley.fastcar.api.vehicle.car.CombustionCar;
 
 @SuppressWarnings("unused")

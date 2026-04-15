@@ -1,4 +1,4 @@
-package minevalley.fastcar.api.characteristics;
+package minevalley.fastcar.api.characteristics.specs;
 
 import org.jetbrains.annotations.Contract;
 

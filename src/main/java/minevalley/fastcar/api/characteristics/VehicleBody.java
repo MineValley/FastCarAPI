@@ -1,7 +1,7 @@
 package minevalley.fastcar.api.characteristics;
 
-import minevalley.fastcar.api.characteristics.shape.Addon;
-import minevalley.fastcar.api.characteristics.shape.Seat;
+import minevalley.fastcar.api.characteristics.body.Addon;
+import minevalley.fastcar.api.characteristics.body.Seat;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.Contract;
 

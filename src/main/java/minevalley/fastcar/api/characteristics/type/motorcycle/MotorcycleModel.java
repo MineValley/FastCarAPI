@@ -1,8 +1,8 @@
-package minevalley.fastcar.api.characteristics.motorcycle;
+package minevalley.fastcar.api.characteristics.type.motorcycle;
 
 import minevalley.fastcar.api.characteristics.Model;
-import minevalley.fastcar.api.characteristics.RefuelableModel;
-import minevalley.fastcar.api.characteristics.StorageModel;
+import minevalley.fastcar.api.characteristics.specs.RefuelableModel;
+import minevalley.fastcar.api.characteristics.specs.StorageModel;
 import minevalley.fastcar.api.vehicle.motorcycle.Motorcycle;
 
 @SuppressWarnings("unused")

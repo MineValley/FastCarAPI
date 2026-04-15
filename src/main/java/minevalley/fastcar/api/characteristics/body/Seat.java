@@ -1,4 +1,4 @@
-package minevalley.fastcar.api.characteristics.shape;
+package minevalley.fastcar.api.characteristics.body;
 
 import lombok.AccessLevel;
 import lombok.Getter;
