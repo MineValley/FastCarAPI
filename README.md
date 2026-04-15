@@ -1,6 +1,6 @@
 # FastCarAPI
 
-FastCarAPI provides access to all vehicle related features of MineValley.
+The FastCarAPI provides essential features and access to the vehicles system of MineValleyEU. This API is widely used in vehicle-related modules (e.g. speed cameras, gas stations, police) 
 
 ## Installation
 
