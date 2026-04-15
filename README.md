@@ -1,24 +1,6 @@
 # FastCarAPI
 
-A comprehensive vehicle management API for Minecraft servers using PaperMC. FastCarAPI provides a robust framework for creating, managing, and interacting with various types of vehicles in the Minecraft world.
-
-## Vehicles
-
-```
-Vehicle (base interface)
-├── RechargeableVehicle
-├── RefuelableVehicle
-├── StorageVehicle
-├── Car
-│   ├── ElectricCar
-│   └── CombustionCar
-├── Motorcycle
-├── ElectricScooter
-├── CombustionScooter
-├── Bicycle
-├── Pedelec
-└── Helicopter
-```
+FastCarAPI provides access to all vehicle related features of MineValley.
 
 ## Installation
 
@@ -27,6 +9,7 @@ Vehicle (base interface)
 Add the MineValley GitHub repository to your `pom.xml`:
 
 ```xml
+
 <repositories>
     <repository>
         <id>github</id>
@@ -38,6 +21,7 @@ Add the MineValley GitHub repository to your `pom.xml`:
 Add the dependency:
 
 ```xml
+
 <dependency>
     <groupId>minevalley.fastcar</groupId>
     <artifactId>api</artifactId>
