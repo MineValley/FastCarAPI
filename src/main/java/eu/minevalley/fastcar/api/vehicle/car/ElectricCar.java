@@ -1,0 +1,16 @@
+package eu.minevalley.fastcar.api.vehicle.car;
+
+import eu.minevalley.fastcar.api.characteristics.type.car.ElectricCarModel;
+import eu.minevalley.fastcar.api.vehicle.RechargeableVehicle;
+import org.jetbrains.annotations.Contract;
+
+import javax.annotation.Nonnull;
+
+@SuppressWarnings("unused")
+public interface ElectricCar extends Car<ElectricCar>, RechargeableVehicle {
+
+    @Nonnull
+    @Override
+    @Contract(pure = true)
+    ElectricCarModel model();
+}
