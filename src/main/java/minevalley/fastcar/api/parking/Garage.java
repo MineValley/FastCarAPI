@@ -1,7 +1,7 @@
 package minevalley.fastcar.api.parking;
 
-import minevalley.core.api.localization.Address;
-import minevalley.core.api.user.User;
+import eu.minevalley.proxima.api.localization.Address;
+import eu.minevalley.proxima.api.user.User;
 import minevalley.fastcar.api.vehicle.car.Car;
 import org.jetbrains.annotations.Contract;
 

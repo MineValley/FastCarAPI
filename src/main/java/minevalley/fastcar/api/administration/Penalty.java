@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.administration;
 
-import minevalley.core.api.user.User;
+import eu.minevalley.proxima.api.user.User;
 import minevalley.fastcar.api.vehicle.Vehicle;
 import org.jetbrains.annotations.Contract;
 

@@ -1,6 +1,6 @@
 package minevalley.fastcar.api.vehicle;
 
-import minevalley.core.api.Registrant;
+import eu.minevalley.proxima.api.Registrant;
 import minevalley.fastcar.api.physics.PhysicsObject;
 import minevalley.fastcar.api.characteristics.Model;
 import minevalley.fastcar.api.characteristics.VehicleColor;

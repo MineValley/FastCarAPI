@@ -1,10 +1,10 @@
 package minevalley.fastcar.api.characteristics.body;
 
+import eu.minevalley.proxima.api.Proxima;
+import eu.minevalley.proxima.api.item.ItemBuilder;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import minevalley.core.api.Core;
-import minevalley.core.api.item.ItemBuilder;
 import net.kyori.adventure.text.format.NamedTextColor;
 
 import javax.annotation.Nonnull;
@@ -32,6 +32,6 @@ public enum Addon implements Attachment {
 
     @Override
     public @Nonnull ItemBuilder getItem() {
-        return Core.createItem(skull).setDisplayName(displayName, NamedTextColor.GOLD);
+        return Proxima.createItem(skull).setDisplayName(displayName, NamedTextColor.GOLD);
     }
 }
