@@ -16,8 +16,8 @@
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
-    <groupId>minevalley.fastcar</groupId>
-    <artifactId>api</artifactId>
+    <groupId>eu.minevalley</groupId>
+    <artifactId>fastcar-api</artifactId>
     <version>${version}</version>
     <packaging>jar</packaging>
 
