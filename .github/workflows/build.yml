@@ -25,7 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up to JDK 1.8
+      - name: Set up to JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
