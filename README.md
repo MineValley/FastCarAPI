@@ -9,10 +9,9 @@ The FastCarAPI provides essential features and access to the vehicles system of 
 Add the MineValley GitHub repository to your `pom.xml`:
 
 ```xml
-
 <repositories>
     <repository>
-        <id>github</id>
+        <id>fastcar-api</id>
         <url>https://maven.pkg.github.com/MineValley/FastCarAPI</url>
     </repository>
 </repositories>
@@ -21,10 +20,10 @@ Add the MineValley GitHub repository to your `pom.xml`:
 Add the dependency:
 
 ```xml
-
 <dependency>
     <groupId>minevalley.fastcar</groupId>
     <artifactId>api</artifactId>
     <version>0.1.6</version>
+    <scope>provided</scope>
 </dependency>
 ```
