@@ -21,9 +21,9 @@ Add the dependency:
 
 ```xml
 <dependency>
-    <groupId>minevalley.fastcar</groupId>
-    <artifactId>api</artifactId>
-    <version>0.1.6</version>
+    <groupId>eu.minevalley</groupId>
+    <artifactId>fastcar-api</artifactId>
+    <version>0.4.0</version>
     <scope>provided</scope>
 </dependency>
 ```
