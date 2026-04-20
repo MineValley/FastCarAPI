@@ -4,11 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>eu.minevalley</groupId>
+    <artifactId>fastcar-api</artifactId>
+    <version>0.3.0</version>
+    <packaging>jar</packaging>
+
     <name>FastCarAPI</name>
 
     <properties>
-        <version>0.3.0</version>
-
         <lombok.version>1.18.30</lombok.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,10 +19,48 @@
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
-    <groupId>eu.minevalley</groupId>
-    <artifactId>fastcar-api</artifactId>
-    <version>${version}</version>
-    <packaging>jar</packaging>
+    <dependencies>
+        <!-- CoreAPI -->
+        <dependency>
+            <groupId>eu.minevalley</groupId>
+            <artifactId>core-api</artifactId>
+            <version>1.306.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Paper -->
+        <!--suppress VulnerableLibrariesLocal -->
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.4-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Libs -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
+        </repository>
+        <repository>
+            <id>paper-mc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -75,47 +116,4 @@
             </snapshots>
         </repository>
     </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/MineValley/CoreAPI</url>
-        </repository>
-        <repository>
-            <id>paper-mc</id>
-            <url>https://repo.papermc.io/repository/maven-public/</url>
-        </repository>
-    </repositories>
-
-    <dependencies>
-        <!-- CoreAPI -->
-        <dependency>
-            <groupId>eu.minevalley</groupId>
-            <artifactId>core-api</artifactId>
-            <version>1.306.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Paper -->
-        <!--suppress VulnerableLibrariesLocal -->
-        <dependency>
-            <groupId>io.papermc.paper</groupId>
-            <artifactId>paper-api</artifactId>
-            <version>1.21.4-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Libs -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.11.0</version>
-        </dependency>
-    </dependencies>
 </project>
