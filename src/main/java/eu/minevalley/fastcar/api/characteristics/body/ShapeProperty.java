@@ -1,6 +1,6 @@
 package eu.minevalley.fastcar.api.characteristics.body;
 
-import eu.minevalley.proxima.api.item.ItemBuilder;
+import eu.minevalley.core.api.item.ItemBuilder;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;

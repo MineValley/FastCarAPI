@@ -1,7 +1,8 @@
 package eu.minevalley.fastcar.api.characteristics.body;
 
+import eu.minevalley.core.api.item.ItemBuilder;
+import eu.minevalley.fastcar.api.FastCar;
 import eu.minevalley.proxima.api.Proxima;
-import eu.minevalley.proxima.api.item.ItemBuilder;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +30,7 @@ public enum Seat implements Attachment {
     @Override
     @Nonnull
     public ItemBuilder getItem() {
-        return Proxima.createItem(
+        return FastCar.core().createItem(
                 this == DRIVER
                         ? "142120ec49499309c1e7935b84ad779918a882331b24410f5a873c9fa895ebaf"
                         : "1266462350ec26549193f6eef4fc6036bbd0d4fb25853afd8cae9685bc44ebc8"

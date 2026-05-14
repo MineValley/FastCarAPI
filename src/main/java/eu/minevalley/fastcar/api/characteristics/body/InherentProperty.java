@@ -1,7 +1,7 @@
 package eu.minevalley.fastcar.api.characteristics.body;
 
-import eu.minevalley.proxima.api.Proxima;
-import eu.minevalley.proxima.api.item.ItemBuilder;
+import eu.minevalley.core.api.item.ItemBuilder;
+import eu.minevalley.fastcar.api.FastCar;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -32,6 +32,6 @@ public enum InherentProperty implements ShapeProperty {
 
     @Override
     public @Nonnull ItemBuilder getItem() {
-        return Proxima.createItem(skull).setDisplayName(displayName, color);
+        return FastCar.core().createItem(skull).setDisplayName(displayName, color);
     }
 }
