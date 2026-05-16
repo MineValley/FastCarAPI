@@ -26,32 +26,32 @@ public interface VisualBuilder {
     /**
      * Sets the x coordinate of this visual's location.
      */
-    void setX(long x);
+    void setX(float x);
 
     /**
      * Sets the y coordinate of this visual's location.
      */
-    void setY(long y);
+    void setY(float y);
 
     /**
      * Sets the z coordinate of this visual's location.
      */
-    void setZ(long z);
+    void setZ(float z);
 
     /**
      * Sets the yaw of this visual's rotation.
      */
-    void setYaw(long yaw);
+    void setYaw(float yaw);
 
     /**
      * Sets the pitch of this visual's rotation.
      */
-    void setPitch(long pitch);
+    void setPitch(float pitch);
 
     /**
      * Gets the roll of this visual's rotation.
      */
-    void setRoll(long roll);
+    void setRoll(float roll);
 
     /**
      * Attaches the given addons to this visual.
