@@ -56,42 +56,42 @@ public interface Visual {
      *
      * @return x coordinate
      */
-    long getX();
+    float getX();
 
     /**
      * Gets the y coordinate of this visual's location.
      *
      * @return y coordinate
      */
-    long getY();
+    float getY();
 
     /**
      * Gets the z coordinate of this visual's location.
      *
      * @return z coordinate
      */
-    long getZ();
+    float getZ();
 
     /**
      * Gets the yaw of this visual's rotation.
      *
      * @return yaw
      */
-    long getYaw();
+    float getYaw();
 
     /**
      * Gets the pitch of this visual's rotation.
      *
      * @return pitch
      */
-    long getPitch();
+    float getPitch();
 
     /**
      * Gets the roll of this visual's rotation.
      *
      * @return roll
      */
-    long getRoll();
+    float getRoll();
 
     /**
      * Moves this visual to the specific location and updates it's rotation
@@ -103,7 +103,7 @@ public interface Visual {
      * @param pitch pitch
      * @param roll  roll
      */
-    void move(long x, long y, long z, long yaw, long pitch, long roll);
+    void move(float x, float y, float z, float yaw, float pitch, float roll);
 
     /**
      * Moves this visual to the specific location and updates it's 2D rotation
@@ -114,7 +114,7 @@ public interface Visual {
      * @param yaw   yaw
      * @param pitch pitch
      */
-    default void move(long x, long y, long z, long yaw, long pitch) {
+    default void move(float x, float y, float z, float yaw, float pitch) {
         move(x, y, z, yaw, pitch, getPitch());
     }
 
@@ -125,7 +125,7 @@ public interface Visual {
      * @param y y coordinate
      * @param z z coordinate
      */
-    default void move(long x, long y, long z) {
+    default void move(float x, float y, float z) {
         move(x, y, z, getYaw(), getPitch(), getRoll());
     }
 
@@ -136,14 +136,14 @@ public interface Visual {
      * @param pitch pitch
      * @param roll  roll
      */
-    void rotate(long yaw, long pitch, long roll);
+    void rotate(float yaw, float pitch, float roll);
 
     /**
      * Rotates this visual to a specific yaw, while keeping the current pitch and roll
      *
      * @param yaw yaw
      */
-    default void rotate(long yaw) {
+    default void rotate(float yaw) {
         rotate(yaw, getPitch(), getRoll());
     }
 
