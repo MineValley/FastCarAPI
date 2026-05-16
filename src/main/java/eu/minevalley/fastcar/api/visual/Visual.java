@@ -203,20 +203,25 @@ public interface Visual {
     void addPassenger(@Nonnull Passenger passenger) throws IllegalStateException;
 
     /**
-     * Checks whether this visual has one or more free seats
+     * Checks whether all seats of this visual are occupied
      *
-     * @return true, if a seat is empty
+     * @return true, if all seats are occupied, false if there is at least one free seat
      */
-    default boolean hasFreeSeat() {
-        return !isOccupied();
-    }
+    boolean isOccupied();
 
     /**
      * Checks whether all seats of this visual are occupied
      *
      * @return true, if all seats are occupied, false if there is at least one free seat
      */
-    boolean isOccupied();
+    boolean isFullyOccupied();
+
+    /**
+     * Checks whether this visual has one or more free seats
+     *
+     * @return true, if a seat is empty
+     */
+    boolean hasFreeSeat();
 
     /**
      * Get a set of all addons currently attached to the visual.
