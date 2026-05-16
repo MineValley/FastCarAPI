@@ -37,15 +37,6 @@ public interface Vehicle<T extends Vehicle<T>> {
     Model<T> model();
 
     /**
-     * Gets the color of this vehicle.
-     *
-     * @return the color
-     */
-    @Nonnull
-    @Contract(pure = true)
-    VehicleColor getColor();
-
-    /**
      * Gets the physics object associated with this vehicle.
      * <p>
      * <b>Note:</b> This may return null if the vehicle is not currently spawned in the world. This is the case for new vehicles and for vehicles that have been towed.
@@ -55,6 +46,15 @@ public interface Vehicle<T extends Vehicle<T>> {
     @Nullable
     @Contract(pure = true)
     PhysicsObject<T> physicsObject();
+
+    /**
+     * Gets the color of this vehicle.
+     *
+     * @return the color
+     */
+    @Nonnull
+    @Contract(pure = true)
+    VehicleColor getColor();
 
     /**
      * Sets the color of this vehicle.
