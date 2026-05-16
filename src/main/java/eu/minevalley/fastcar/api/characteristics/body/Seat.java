@@ -2,7 +2,6 @@ package eu.minevalley.fastcar.api.characteristics.body;
 
 import eu.minevalley.core.api.item.ItemBuilder;
 import eu.minevalley.fastcar.api.FastCar;
-import eu.minevalley.proxima.api.Proxima;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
