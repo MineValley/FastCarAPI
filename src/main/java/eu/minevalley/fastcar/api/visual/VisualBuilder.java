@@ -24,32 +24,23 @@ public interface VisualBuilder {
     void setWorld(@Nonnull World world) throws IllegalArgumentException;
 
     /**
-     * Sets the x coordinate of this visual's location.
-     */
-    void setX(float x);
-
-    /**
-     * Sets the y coordinate of this visual's location.
-     */
-    void setY(float y);
-
-    /**
-     * Sets the z coordinate of this visual's location.
-     */
-    void setZ(float z);
-
-    /**
      * Sets the yaw of this visual's rotation.
+     * <p>
+     * <b>Default:</b> 0
      */
     void setYaw(float yaw);
 
     /**
      * Sets the pitch of this visual's rotation.
+     * <p>
+     * <b>Default:</b> 0
      */
     void setPitch(float pitch);
 
     /**
      * Gets the roll of this visual's rotation.
+     * <p>
+     * <b>Default:</b> 0
      */
     void setRoll(float roll);
 
@@ -73,8 +64,9 @@ public interface VisualBuilder {
      * Places the actual visual.
      *
      * @return newly created visual
+     * @throws NullPointerException if the world or the color is not set
      */
     @Nonnull
-    @Contract("-> new")
-    Visual place();
+    @Contract("_, _, _ -> new")
+    Visual place(float x, float y, float z) throws NullPointerException;
 }
