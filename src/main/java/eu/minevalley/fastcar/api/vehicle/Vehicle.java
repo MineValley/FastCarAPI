@@ -66,10 +66,20 @@ public interface Vehicle<T extends Vehicle<T>> {
 
     /**
      * Gets the owner of this vehicle.
+     * <p>
+     * <b>Note:</b> Not all vehicles have owners! Temporary vehicles (those of fractions, quests, the team, ...) do not have an owner and will return null.
      *
-     * @return the owner
+     * @return the owner, if existing
      */
-    @Nonnull
+    @Nullable
     @Contract(pure = true)
     Registrant getOwner();
+
+    /**
+     * Checks whether this vehicle is temporary.
+     *
+     * @return true, if the vehicle is temporary
+     */
+    @Contract(pure = true)
+    boolean isPermanent();
 }
