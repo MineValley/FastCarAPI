@@ -39,6 +39,15 @@ public interface VehicleBody {
     Set<VehicleColor> colors();
 
     /**
+     * Gets an array of colors that are set as default for this body. This array contains at least one entry.
+     *
+     * @return array of default colors
+     */
+    @Nonnull
+    @Contract(pure = true)
+    VehicleColor[] defaultColors();
+
+    /**
      * Gets the seats of this body.
      *
      * @return The set of seats.

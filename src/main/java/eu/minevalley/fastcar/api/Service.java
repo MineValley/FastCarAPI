@@ -21,4 +21,11 @@ public interface Service {
     <T extends Vehicle<T>> Vehicle<T> createTemporaryVehicle(@Nonnull Model<T> model,
                                                              @Nonnull String licensePlatePrefix,
                                                              @Nonnull VehicleColor color);
+
+    @Nonnull
+    @Contract("_, _ -> new")
+    default <T extends Vehicle<T>> Vehicle<T> createTemporaryVehicle(@Nonnull Model<T> model,
+                                                                     @Nonnull String licensePlatePrefix) {
+        return createTemporaryVehicle(model, licensePlatePrefix, model.body().defaultColors()[0]);
+    }
 }
