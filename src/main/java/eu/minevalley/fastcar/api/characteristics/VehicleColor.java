@@ -10,7 +10,7 @@ import java.awt.*;
  * @param color the actual color
  */
 @SuppressWarnings("unused")
-public record VehicleColor(@Nonnull String name, @Nonnull Color color) {
+public record VehicleColor(int id, @Nonnull String name, @Nonnull Color color) {
 
     public VehicleColor {
         if (name == null) {

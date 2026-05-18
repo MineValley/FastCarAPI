@@ -30,6 +30,15 @@ public interface VehicleBody {
     NamespacedKey itemModel();
 
     /**
+     * Gets a set of all available colors for this body.
+     *
+     * @return set of all available colors for this body
+     */
+    @Nonnull
+    @Contract(pure = true)
+    Set<VehicleColor> colors();
+
+    /**
      * Gets the seats of this body.
      *
      * @return The set of seats.
