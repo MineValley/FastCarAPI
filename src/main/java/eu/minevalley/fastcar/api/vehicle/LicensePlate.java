@@ -16,6 +16,36 @@ import javax.annotation.Nonnull;
 public record LicensePlate(@Nonnull String raw) {
 
     /**
+     * Checks whether this license plate indicates a fraction vehicle.
+     *
+     * @return true, if license plate indicates a fraction vehicle
+     */
+    @Contract(pure = true)
+    boolean isFractionPlate() {
+        return isPolicePlate() || isMedicPlate();
+    }
+
+    /**
+     * Checks whether this license plate indicates a police vehicle.
+     *
+     * @return true, if license plate indicates a police vehicle
+     */
+    @Contract(pure = true)
+    boolean isPolicePlate() {
+        return raw.startsWith("PO");
+    }
+
+    /**
+     * Checks whether this license plate indicates a medic vehicle.
+     *
+     * @return true, if license plate indicates a medic vehicle
+     */
+    @Contract(pure = true)
+    boolean isMedicPlate() {
+        return raw.startsWith("RD");
+    }
+
+    /**
      * Checks if the license plate is a team plate
      * <p>
      * Team plates start with TE AM
@@ -24,25 +54,25 @@ public record LicensePlate(@Nonnull String raw) {
      */
     @Contract(pure = true)
     boolean isTeamPlate() {
-        return raw.startsWith("TEAM");
+        return raw.startsWith("TE-AM");
     }
 
     /**
-     * Checks if the license plate is for a bike
-     * <p>
-     * Bike plates start with BI KE
+     * Checks whether the license plate indicates a temporary vehicle
      *
-     * @return true if it is a bike plate, false otherwise
+     * @return true, if the license plate indicates a temporary vehicle
      */
     @Contract(pure = true)
-    boolean isBike() {
-        return raw.startsWith("BIKE");
+    boolean isTemporary() {
+        return !raw.startsWith("MV");
     }
 
     /**
      * Checks if the license plate is for an electric vehicle
      * <p>
      * Electric vehicle plates end with E
+     * <p>
+     * <b>Note:</b> This method says nothing about whether the vehicle actually is electric! This just checks whether the license plate contains the E-indicator!
      *
      * @return true if it is an electric vehicle plate, false otherwise
      */
