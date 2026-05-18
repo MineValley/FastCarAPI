@@ -81,5 +81,5 @@ public interface Vehicle<T extends Vehicle<T>> {
      * @return true, if the vehicle is temporary
      */
     @Contract(pure = true)
-    boolean isPermanent();
+    boolean isTemporary();
 }

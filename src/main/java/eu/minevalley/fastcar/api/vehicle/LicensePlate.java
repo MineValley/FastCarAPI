@@ -61,6 +61,7 @@ public record LicensePlate(@Nonnull String raw) {
      * Checks whether the license plate indicates a temporary vehicle
      *
      * @return true, if the license plate indicates a temporary vehicle
+     * @see Vehicle#isTemporary()
      */
     @Contract(pure = true)
     boolean isTemporary() {
@@ -93,6 +94,6 @@ public record LicensePlate(@Nonnull String raw) {
     @Nonnull
     @Contract(pure = true)
     public String toString() {
-        return raw.substring(0, 2) + " " + raw.substring(2, 4) + " " + raw.substring(4);
+        return raw.replace("-", " ");
     }
 }
