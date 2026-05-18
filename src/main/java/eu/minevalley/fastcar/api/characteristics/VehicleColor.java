@@ -23,4 +23,19 @@ public record VehicleColor(int id, @Nonnull String name, @Nonnull Color color) {
             throw new IllegalArgumentException("VehicleColor color cannot be null");
         }
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof VehicleColor && this.id() == ((VehicleColor) obj).id();
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
+
+    @Override
+    public @Nonnull String toString() {
+        return name;
+    }
 }
