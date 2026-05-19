@@ -4,6 +4,7 @@ import eu.minevalley.fastcar.api.characteristics.Model;
 import eu.minevalley.fastcar.api.characteristics.VehicleColor;
 import eu.minevalley.fastcar.api.physics.PhysicsObject;
 import eu.minevalley.proxima.api.Registrant;
+import org.bukkit.Location;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
@@ -46,6 +47,26 @@ public interface Vehicle<T extends Vehicle<T>> {
     @Nullable
     @Contract(pure = true)
     PhysicsObject<T> physicsObject();
+
+    /**
+     * Spawns the vehicle at a specific location.
+     *
+     * @return location to spawn the vehicle at
+     * @throws IllegalArgumentException if the location is null
+     * @throws IllegalStateException    if the vehicle is already spawned
+     */
+    @Nonnull
+    PhysicsObject<T> spawn(@Nonnull Location location) throws IllegalArgumentException, IllegalStateException;
+
+    /**
+     * Checks whether this vehicle is currently spawned on the map.
+     *
+     * @return true, if the vehicle is spawned
+     */
+    @Contract(pure = true)
+    default boolean isSpawned() {
+        return physicsObject() != null;
+    }
 
     /**
      * Gets the color of this vehicle.
