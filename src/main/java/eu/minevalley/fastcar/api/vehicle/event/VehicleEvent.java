@@ -1,4 +1,4 @@
-package eu.minevalley.fastcar.api.event;
+package eu.minevalley.fastcar.api.vehicle.event;
 
 import eu.minevalley.fastcar.api.vehicle.Vehicle;
 import lombok.Getter;

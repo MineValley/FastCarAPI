@@ -1,6 +1,5 @@
-package eu.minevalley.fastcar.api.event;
+package eu.minevalley.fastcar.api.administration;
 
-import eu.minevalley.fastcar.api.administration.Penalty;
 import eu.minevalley.fastcar.api.vehicle.Vehicle;
 import lombok.Getter;
 import lombok.Setter;
