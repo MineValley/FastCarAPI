@@ -203,6 +203,11 @@ public interface Visual {
     void addPassenger(@Nonnull Passenger passenger) throws IllegalStateException;
 
     /**
+     * Kicks all passengers out of this vehicle. Including the driver and every non-player passenger!
+     */
+    void kickAllPassengers();
+
+    /**
      * Checks whether all seats of this visual are occupied
      *
      * @return true, if all seats are occupied, false if there is at least one free seat
