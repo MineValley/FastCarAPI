@@ -27,11 +27,6 @@ public record VehicleColor(int id, @Nonnull String name, @Nonnull Color color, b
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return obj instanceof VehicleColor && this.id() == ((VehicleColor) obj).id();
-    }
-
-    @Override
     public int hashCode() {
         return id;
     }
