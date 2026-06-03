@@ -1,7 +1,8 @@
 package eu.minevalley.fastcar.api.characteristics;
 
+import org.bukkit.Color;
+
 import javax.annotation.Nonnull;
-import java.awt.*;
 
 /**
  * Vehicle models can come in different colors. Users can select a color when purchasing a vehicle or change it later.
