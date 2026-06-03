@@ -54,6 +54,7 @@ public interface Service {
     default <T extends Vehicle<T>> Vehicle<T> createTemporaryVehicle(@Nonnull Model<T> model,
                                                                      @Nonnull String licensePlatePrefix)
             throws IllegalArgumentException {
-        return createTemporaryVehicle(model, licensePlatePrefix, model.body().defaultColors()[0]);
+        return createTemporaryVehicle(model, licensePlatePrefix, model.body().colors().stream()
+                .filter(VehicleColor::isDefault).findAny().orElseThrow());
     }
 }
