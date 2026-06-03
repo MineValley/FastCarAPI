@@ -6,11 +6,12 @@ import java.awt.*;
 /**
  * Vehicle models can come in different colors. Users can select a color when purchasing a vehicle or change it later.
  *
- * @param name  name of the color
- * @param color the actual color
+ * @param name      name of the color
+ * @param color     the actual color
+ * @param isDefault determines, whether this color is a default color
  */
 @SuppressWarnings("unused")
-public record VehicleColor(int id, @Nonnull String name, @Nonnull Color color) {
+public record VehicleColor(int id, @Nonnull String name, @Nonnull Color color, boolean isDefault) {
 
     public VehicleColor {
         if (name == null) {
