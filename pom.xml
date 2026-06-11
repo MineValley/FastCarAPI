@@ -24,7 +24,7 @@
         <dependency>
             <groupId>eu.minevalley</groupId>
             <artifactId>core-api</artifactId>
-            <version>1.307.8</version>
+            <version>1.309.2</version>
             <scope>provided</scope>
         </dependency>
 
