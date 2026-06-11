@@ -66,20 +66,22 @@ public interface PhysicsObject<T extends Vehicle<T>> {
      *
      * @param seat      seat to add the passenger to
      * @param passenger passenger to add
+     * @param name      name of the passenger (will be displayed to other passengers)
      * @throws IllegalArgumentException if the seat or the passenger is null
      * @throws IllegalStateException    if the seat is already occupied or if the passenger is already occupying another seat in any vehicle
      */
-    void addPassenger(@Nonnull Seat seat, @Nonnull Passenger passenger) throws IllegalArgumentException,
-            IllegalStateException;
+    void addPassenger(@Nonnull Seat seat, @Nonnull Passenger passenger, @Nonnull String name)
+            throws IllegalArgumentException, IllegalStateException;
 
     /**
      * Adds the given passenger to any free seat.
      *
      * @param passenger passenger to add
+     * @param name      name of the passenger (will be displayed to other passengers)
      * @throws IllegalStateException if there is no free seat
      * @see #hasFreeSeat()
      */
-    void addPassenger(@Nonnull Passenger passenger) throws IllegalStateException;
+    void addPassenger(@Nonnull Passenger passenger, @Nonnull String name) throws IllegalStateException;
 
     /**
      * Kicks all passengers out of this vehicle. Including the driver and every non-player passenger!
