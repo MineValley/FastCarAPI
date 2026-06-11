@@ -54,12 +54,7 @@ public interface PhysicsObject<T extends Vehicle<T>> {
      */
     @Nullable
     @Contract(value = "null -> null", pure = true)
-    default Passenger getPassenger(@Nullable Seat seat) {
-        if (seat == null) {
-            return null;
-        }
-        return getPassengers().get(seat);
-    }
+    Passenger getPassenger(@Nullable Seat seat);
 
     /**
      * Adds the given passenger to the given seat.
