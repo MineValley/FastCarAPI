@@ -2,6 +2,7 @@ package eu.minevalley.fastcar.api.characteristics;
 
 import eu.minevalley.fastcar.api.characteristics.body.Addon;
 import eu.minevalley.fastcar.api.characteristics.body.Seat;
+import eu.minevalley.fastcar.api.characteristics.body.VehicleComponents;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.Contract;
 
@@ -63,6 +64,15 @@ public interface VehicleBody {
     @Nonnull
     @Contract(pure = true)
     Set<Addon> addons();
+
+    /**
+     * Gets the components of this body.
+     *
+     * @return The set of components.
+     */
+    @Nonnull
+    @Contract(pure = true)
+    Set<VehicleComponents> components();
 
     /**
      * Checks if this body has a roof.
