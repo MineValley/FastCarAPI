@@ -13,18 +13,19 @@ import javax.annotation.Nonnull;
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum Seat implements Attachment {
 
-    DRIVER(0, "Fahrer"),
-    CO_DRIVER(0, "Beifahrer"),
-    MIDDLE_LEFT(0, "Mitte links"),
-    MIDDLE_MIDDLE(0, "Mitte mitte"),
-    MIDDLE_RIGHT(0, "Mitte rechts"),
-    BACK_LEFT(0, "Hinten links"),
-    BACK_MIDDLE(0, "Hinten mitte"),
-    BACK_RIGHT(0, "Hinten rechts"),
-    AMBULANCE_FOLDING_SEAT(90, "RTW-Klappsitz");
+    DRIVER(0, "Fahrer", "Fahrersitz"),
+    CO_DRIVER(0, "Beifahrer", "Beifahrersitz"),
+    MIDDLE_LEFT(0, "Mitte links", "Sitz links in der Mitte"),
+    MIDDLE_MIDDLE(0, "Mitte mitte", "Sitz mittig in der Mitte"),
+    MIDDLE_RIGHT(0, "Mitte rechts", "Sitz rechts in der Mitte"),
+    BACK_LEFT(0, "Hinten links", "Sitz hinten links"),
+    BACK_MIDDLE(0, "Hinten mittig", "Sitz hinten mittig"),
+    BACK_RIGHT(0, "Hinten rechts", "Sitz hinten rechts"),
+    AMBULANCE_FOLDING_SEAT(90, "RTW-Klappsitz", "aufklappbaren Sitz");
 
     private final float rotation;
     private final @Nonnull String displayName;
+    private final @Nonnull String niceName;
 
     @Override
     @Nonnull
