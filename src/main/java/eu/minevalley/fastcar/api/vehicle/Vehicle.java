@@ -5,6 +5,7 @@ import eu.minevalley.fastcar.api.characteristics.VehicleColor;
 import eu.minevalley.fastcar.api.physics.PhysicsObject;
 import eu.minevalley.proxima.api.Registrant;
 import org.bukkit.Location;
+import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
@@ -84,6 +85,23 @@ public interface Vehicle<T extends Vehicle<T>> {
      * @throws IllegalArgumentException if the color is null or not available for this vehicle's model
      */
     void changeColor(@Nonnull VehicleColor color) throws IllegalArgumentException;
+
+    /**
+     * Gets the key of this vehicle as item stack
+     *
+     * @return key as item stack
+     */
+    @Nonnull
+    @Contract(pure = true)
+    ItemStack getKey();
+
+    /**
+     * Increases the key index, resulting in all old keys being invalid
+     *
+     * @return new (incremented) key index
+     * @see #getKey()
+     */
+    int increaseKeyIndex();
 
     /**
      * Gets the owner of this vehicle.
